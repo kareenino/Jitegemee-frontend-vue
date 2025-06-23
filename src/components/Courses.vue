@@ -68,6 +68,7 @@ import {ref} from 'vue'
     <v-container>
         <v-row>
             <v-col md="4" v-for="course in courses">
+                <!-- The v-for is for binding -->
                 <v-card color="pink-darken-2">
                     <v-card-item>
                         <v-card-title>{{course.name}}</v-card-title>
