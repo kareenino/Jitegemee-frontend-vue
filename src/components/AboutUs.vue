@@ -3,5 +3,10 @@
 </script>
 
 <template>
-    <h1>About Us</h1>
+   <v-img
+  :width="400"
+  aspect-ratio="16/9"
+  cover
+  src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+></v-img>
 </template>

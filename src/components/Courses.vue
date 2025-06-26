@@ -1,69 +1,11 @@
 <script setup>
 import {ref} from 'vue'
-    const courses = ref([
-        {
-            name:"BSc in Computer Science", 
-            school:"School of Computing", 
-            description:"Best for incoming computer students",
-            intake:"September 2025"
-        },
-        {
-            name:"BSc in Medicine", 
-            school:"School of Medicine", 
-            description:"Best for incoming medicine students",
-            intake:"September 2025"
-        },
-        {
-            name:"BSc in Data Science", 
-            school:"School of Science", 
-            description:"Best for incoming data science students",
-            intake:"September 2025"
-        },
-        {
-            name:"BSc in Mechanical Engineering", 
-            school:"School of Engineering", 
-            description:"Best for incoming engineering students",
-            intake:"September 2025"
-        },
-        {
-            name:"BSc in Business & IT", 
-            school:"School of Medicine", 
-            description:"Best for incoming medicine students",
-            intake:"September 2025"
-        },
-        {
-            name:"BSc in Architecture", 
-            school:"School of Science", 
-            description:"Best for incoming data science students",
-            intake:"September 2025"
-        },
-        {
-            name:"BSc in Communication", 
-            school:"School of Engineering", 
-            description:"Best for incoming engineering students",
-            intake:"September 2025"
-        },
-        {
-            name:"BSc in Tourism Management", 
-            school:"School of Medicine", 
-            description:"Best for incoming medicine students",
-            intake:"September 2025"
-        },
-        {
-            name:"BSc in International Relations", 
-            school:"School of Science", 
-            description:"Best for incoming data science students",
-            intake:"September 2025"
-        },
-        {
-            name:"BSc in Business Management", 
-            school:"School of Engineering", 
-            description:"Best for incoming engineering students",
-            intake:"September 2025"
-        },
-    ])
-</script>
+import { useCoursesStore } from '../stores/courses'
 
+const coursesStore = useCoursesStore() //making the courses object accecssible
+const courses = coursesStore.courses
+</script>
+ 
 <template>
     <v-container>
         <v-row>
